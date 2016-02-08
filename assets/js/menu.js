@@ -1,0 +1,19 @@
+$(document).ready(function(){
+	if($('#menupop').hasClass('active')){
+		$("#menuopen").click(function(){
+			$('#menupop').fadeOut('slow');
+			$('#menupop').removeClass('active');
+		});
+		$("#menuclose").click(function(){
+			$('#menupop').fadeOut('slow');
+		});
+	}else{
+		$("#menuopen").click(function(){
+			$('#menupop').fadeIn('slow');
+			$('#menupop').addClass('active');
+		});
+		$("#menuclose").click(function(){
+			$('#menupop').fadeOut('slow');
+		});
+	}
+});

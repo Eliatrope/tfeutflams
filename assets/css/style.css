@@ -1,0 +1,178 @@
+/*********************************
+
+------------SOMMAIRE--------------
+			
+1.Constants and variables
+	1.1Fonts
+2.ERROR 666 UGLY WEBSITE
+3.Header
+4.Actualités
+*********************************/
+
+/*1.Constants and variables*/
+.cb{
+	clear:both;
+}
+body{
+	margin:0;
+	/*background:url('../images/flams.jpg');*/
+	font-family:helvetica;
+}
+.hugecontainer{
+	width:100%;
+}
+
+/*1.1Fonts*/
+@font-face {
+    font-family: 'helvetica';
+    src: url('../fonts/helvetica/helvetica.eot');
+    src: url('../fonts/helvetica/helvetica.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetica/helvetica.woff2') format('woff2'),
+         url('../fonts/helvetica/helvetica.woff') format('woff'),
+         url('../fonts/helvetica/helvetica.ttf') format('truetype'),
+         url('../fonts/helvetica/helvetica.svg#helveticaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*2.ERROR 666*/
+.just{
+	width:500px;
+	height:500px;
+	background-color:rgba(247,25,68,.7);
+	border:5px dotted red;
+	margin:auto;
+	position:relative;
+	overflow:hidden;
+}
+.just h1, .just h4{
+	text-align:center;
+	color:white;
+}
+.just h4{
+	font-size:100px;
+	color:yellow;
+	text-shadow:5px 5px 5px black;
+	cursor:not-allowed;
+	margin-bottom:35px;
+	
+}
+.just img{
+	width:150px;
+	display:inline-block;
+	margin-left:8px;
+	border:2px solid green;
+	transition:all .7s;
+}
+.just:hover{
+	background-color:rgba(125,47,96,.7);
+}
+.just img:hover{
+	transform:rotate(360deg);
+}
+.just p{
+	text-align:center;
+	color:purple;
+	font-size:30px;
+	bottom:0;
+	position:absolute;
+	left:-50px;
+	width:700px;
+	
+}
+.gobo{
+	text-align:center;
+	font-size:40px;
+	text-shadow:5px 5px 5px white;
+}
+.gobo a{
+	color:orange;
+	text-decoration:none;
+}
+
+/*3.Header*/
+.header{
+	width:320px;
+	position:relative;
+	background:url('../images/home/bgardoisetablette.jpg');
+	background-position:center;
+	background-repeat:no-repeat;
+	margin:0 auto 35px auto;
+}
+.containerwrap{
+	height:92px;
+	
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	align-items:center;
+}
+.header a{
+	display:block;
+	margin:auto;
+}
+.hammenu{
+	cursor:pointer;
+	width:45px;
+	padding-left:10px;
+}
+.logo{
+	height:72px;
+	margin-left:-20px;
+}
+.menupop{
+	z-index:999;
+	width:200px;
+	position:fixed;
+	background:url('../images/home/bgardoise.jpg');
+	height:100%;
+	right:0;
+	top:0;
+	display:none;
+}
+.menupop ul{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	color:white;
+	text-align:center;
+}
+.menupop ul a{
+	color:white;
+	text-decoration:none;
+}
+.menupop ul a li{
+	margin-top:10px;
+	transition:all .7s;
+}
+.menupop ul a li:hover{
+	text-decoration:underline;
+	opacity:.7;
+}
+.menuclose{
+	color:white;
+	text-align:center;
+	width:35px;
+	height:35px;
+	line-height:35px;
+	border-radius:35px;
+	background:url('../images/home/bgardoise.jpg');
+	border:1px solid white;
+	position:absolute;
+	top:0;
+	left:-17px;
+	cursor:pointer;
+}
+
+/*4.Actualités*/
+.containeractu{
+	width:320px;
+	background-color:#2a2a2a;
+	margin:auto;
+	color:white;
+}
+.containeractu h1{
+	font-size:32px;
+	text-align:center;
+	padding:20px 0 20px 0;
+}
