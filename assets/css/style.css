@@ -103,11 +103,11 @@ body{
 }
 .containerwrap{
 	height:92px;
-	
 	display:flex;
 	flex-flow:row wrap;
 	justify-content:space-around;
 	align-items:center;
+	width: 100%;
 }
 .header a{
 	display:block;
