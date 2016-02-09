@@ -1,4 +1,19 @@
-<!DOCTYME html>
+<?php
+	require_once 'assets/php/connexion.php';
+	
+	//Récupération actualité
+	$sql="SELECT * FROM actualite ORDER BY id DESC LIMIT 1";
+	$result=$connexion->query($sql);
+	$actu=$result->fetchAll(PDO::FETCH_OBJ);
+	
+	//Récupération géolocalisation
+	$sql="SELECT * FROM emplacement";
+	$resultat=$connexion->query($sql);
+	$emplacement=$resultat->fetchAll(PDO::FETCH_OBJ);
+	
+?>
+<!--Astuce du jour: https://developers.google.com/web/tools/setup/setup-workflow. Pour ne plus avoir à reload le navigateur quant on fait des modifs dans les fichiers-->
+<!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
@@ -22,10 +37,69 @@
 		</div>
 		<p class="gobo"><a href="admin/">VERS LE SUPER BACK-OFFICE</a></p>
 	-->
-			<div class="containeractu">
-				<h1>LA DERNIÈRE ACTUALITÉ</h1>
+			<article class="containeractu">
+				<?php
+					foreach($actu as $a){
+						echo 
+							'<h1>'.$a->title.'</h1>'.
+							'<img src="assets/images/article/'.$a->main_image.'"/>'.
+							'<p>'.
+								$a->content.
+							'</p>'.
+							'<a href="article.php?id='.$a->id.'">'.
+								'<div class="buttoncontaineractu">'.
+									'Lire la suite'.
+								'</div>'.
+							'</a>'
+						;
+					}
+				?>
+				<br />
+			</article>
+			<!--Module géolocalisation-->
+			<div class="containerrdv">
+				<h2>LES RENDEZ-VOUS DE LA SEMAINE</h2>
 			</div>
+			<div id="map"></div>
+			
+			<aside class="navgeoloc">
+				<div class="leftarrow arrow"></div>
+				<p>Lundi 08 février 2016</p>
+				<div class="rightarrow arrow"></div>
+			</aside>
+			
+			<script src="https://maps.googleapis.com/maps/api/js"></script>
+			<script src="assets/js/gmaps.js"></script>
+			<script src="assets/js/global.js"></script>
+				<script>
+					<?php
+						foreach($emplacement as $e){
+							echo
+								"map.addMarker({".
+									"lat: ".$e->latitude.",".
+									"lng: ".$e->longitude.",".
+									"title: '".$e->ville."',".
+									"infoWindow: {".
+										"content: '".$e->ville, $e->adresse."'".
+									"},".
+									"click: function(e) {".
+										"map.setCenter({lat: ".$e->latitude.", lng: ".$e->longitude."});".
+									"},".
+									"icon: './assets/images/home/littlelogo.png',".
+								"});"
+							;
+						}
+					?>
+				</script>
+				
+				<div class="containertitleproduits">
+					<h3>NOS PRODUITS</h3>
+				</div>
+				<div class="containerproduits">
+					
+				</div>
 		</section>
+		
 		<script src="assets/js/jquery-2.2.0.min.js"></script>
 		<script src="assets/js/menu.js"></script>
 	</body>

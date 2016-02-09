@@ -7,6 +7,8 @@
 2.ERROR 666 UGLY WEBSITE
 3.Header
 4.Actualités
+5.Gmaps/Module géolocalisation
+6.Nos produits
 *********************************/
 
 /*1.Constants and variables*/
@@ -92,7 +94,7 @@ body{
 
 /*3.Header*/
 .header{
-	width:320px;
+	width: 100%;
 	position:relative;
 	background:url('../images/home/bgardoisetablette.jpg');
 	background-position:center;
@@ -118,13 +120,13 @@ body{
 }
 .logo{
 	height:72px;
-	margin-left:-20px;
+	margin-left:-45px;
 }
 .menupop{
 	z-index:999;
 	width:200px;
 	position:fixed;
-	background:url('../images/home/bgardoise.jpg');
+	background:url('../images/home/bgmenu.jpg');
 	height:100%;
 	right:0;
 	top:0;
@@ -168,11 +170,103 @@ body{
 .containeractu{
 	width:320px;
 	background-color:#2a2a2a;
-	margin:auto;
+	margin:0px auto 10px auto;
 	color:white;
+}
+.containeractu a{
+	text-decoration:none;
 }
 .containeractu h1{
 	font-size:32px;
 	text-align:center;
 	padding:20px 0 20px 0;
+	margin:0;
+}
+.containeractu img{
+	width:285px;
+	margin:auto;
+	display:block;
+	opacity:.9;
+}
+.containeractu img:hover{
+	opacity:1;
+}
+.containeractu p{
+	width:285px;
+	margin:10px auto 10px auto;
+	text-align:justify;
+	height:152px;
+	overflow:hidden;
+}
+.buttoncontaineractu{
+	width:145px;
+	height:35px;
+	font-size:21px;
+	border-radius:10px;
+	background-color:#96201d;
+	color:white;
+	text-align:center;
+	line-height:35px;
+	margin:5px auto 0 auto;
+	border:1px solid white;
+}
+
+/*5.Gmaps/Module géolocalisation*/
+.containerrdv{
+	width:320px;
+	margin:auto;
+	height:55px;
+	text-align:center;
+	line-height:55px;
+	background-color:#96201d;
+}
+.containerrdv h2{
+	font-size:18px;
+	color:white;
+	margin:10px 0 0 0;
+}
+#map{
+	width:320px;
+	height:160px;
+	margin:auto;
+}
+.navgeoloc{
+	width:320px;
+	margin:auto;
+	background-color:#2a2a2a;
+	color:white;
+	
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	align-items:center;
+}
+.arrow{
+	font-size: 0px; line-height: 0%; width: 0px;
+	border-top: 30px solid #FFFFFF;/* couleur du triangle*/
+	border-left: 20px solid transparent; 
+	border-right: 20px solid transparent; 
+	z-index:999;
+	cursor:pointer;
+}
+.leftarrow{
+	transform:rotate(90deg);
+}
+.rightarrow{
+	transform:rotate(-90deg);
+}
+
+/*6.Nos produits*/
+.containertitleproduits{
+	width:320px;
+	height:55px;
+	background-color:#96201d;
+	margin:auto;
+}
+.containertitleproduits h3{
+	line-height:55px;
+	font-size:30px;
+	color:white;
+	text-align:center;
+	margin:10px 0 0 0;
 }
