@@ -11,6 +11,11 @@
 	$resultat=$connexion->query($sql);
 	$emplacement=$resultat->fetchAll(PDO::FETCH_OBJ);
 	
+	//Récupération flams
+	$sql="SELECT * FROM flams";
+	$resultats=$connexion->query($sql);
+	$flams=$resultats->fetchAll(PDO::FETCH_OBJ);
+	
 ?>
 <!--Astuce du jour: https://developers.google.com/web/tools/setup/setup-workflow. Pour ne plus avoir à reload le navigateur quant on fait des modifs dans les fichiers-->
 <!DOCTYPE html>
@@ -96,8 +101,62 @@
 					<h3>NOS PRODUITS</h3>
 				</div>
 				<div class="containerproduits">
-					
+				<?php
+					foreach($flams as $f){
+						echo
+							'<div class="arrow leftarrow" id="'.$f->id.'"></div>'.
+							'<article class="theproduct" id="'.$f->id.'">'.
+								'<div class="containertitleproduct">'.
+									'<h4>'.$f->nom.'</h4>'.
+								'</div>'.
+								'<div class="containerimgproduct">'.
+									'<img src="'.$f->img.'"/>'.
+								'</div>'.
+								'<p>'.
+									$f->description.
+								'</p>'.
+								'<div class="buttonproduct">'.
+									'<a href="produits.php">En savoir plus</a>'.
+								'</div>'.
+							'</article>'.
+							'<div id="'.$f->id.'"class="arrow rightarrow"></div>'
+						;
+					}
+				?>	
 				</div>
+				<div class="containerformcommande">
+					<h5>ENVIE D'UNE<br>SOIRÉE FLAM'S?</h5>
+					<form action="" method="POST">
+						<div>
+							<label for="name">Nom*</label>
+								<input type="text" name="name" id="name" placeholder="Merci de saisir votre nom"/>
+							<label for="prenom">Prénom*</label>
+								<input type="text" name="prenom" id="prenom" placeholder="Merci de saisir votre prénom"/>
+							<label for="civilite">Civilité*</label>
+								<select id="civilite">
+									<option value="monsieur" name="civilite">Monsieur</option>
+									<option value="madame" name="civilite">Madame</option>
+								</select>
+							<label for="mail">Adresse mail*</label>
+								<input type="text" name="mail" id="mail" placeholder="Merci de saisir votre adresse mail"/>
+							<label for="phone">Téléphone*</label>
+								<input type="text" name="phone" id="phone" placeholder="Merci de saisir votre numéro de téléphone"/>
+							<label for="personne">Nombre de personnes*</label>
+								<input type="number" name="personne" id="personne" placeholder="Merci de saisir le nombre de personnes"/>
+							<label for="place">Lieu</label>
+								<input type="text" name="place" id="place" placeholder="Merci de saisir le lieu de réservation"/>
+							<label for="comm">Commentaire(facultatif)</label>
+							<textarea id="comm" name="comm">Plus d'informations à nous donner ?</textarea>
+							<span>Les champs marqués d'un * sont obligatoires</span>
+							<input type="submit" value="Envoyer"/>
+							
+						</div>
+						<br>
+					</form>
+				</div>
+				<?php
+					include_once "assets/php/footer.php";
+				?>
 		</section>
 		
 		<script src="assets/js/jquery-2.2.0.min.js"></script>

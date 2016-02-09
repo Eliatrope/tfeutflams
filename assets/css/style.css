@@ -9,6 +9,8 @@
 4.Actualités
 5.Gmaps/Module géolocalisation
 6.Nos produits
+7.Formulaire pré-commande
+8.Footer
 *********************************/
 
 /*1.Constants and variables*/
@@ -123,7 +125,7 @@ body{
 	margin-left:-45px;
 }
 .menupop{
-	z-index:999;
+	z-index: 1000;
 	width:200px;
 	position:fixed;
 	background:url('../images/home/bgmenu.jpg');
@@ -181,6 +183,8 @@ body{
 	text-align:center;
 	padding:20px 0 20px 0;
 	margin:0;
+	height:40px;
+	overflow:hidden;
 }
 .containeractu img{
 	width:285px;
@@ -235,6 +239,7 @@ body{
 	margin:auto;
 	background-color:#2a2a2a;
 	color:white;
+	
 	display:flex;
 	flex-flow:row wrap;
 	justify-content:space-around;
@@ -268,4 +273,155 @@ body{
 	color:white;
 	text-align:center;
 	margin:10px 0 0 0;
+}
+.containerproduits{
+	height:470px;
+	background-color:#2a2a2a;
+	
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	align-items:center;
+}
+.theproduct{
+	width:230px;
+	height:410px;
+	background-color:white;
+	
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	align-items:center;
+}
+.theproduct .containertitleproduct{
+	height:66px;
+	width:200px;
+	background-color:#2a2a2a;
+}
+.theproduct .containertitleproduct h4{
+	text-align:center;
+	font-size:25px;
+	color:white;
+	margin:3px 0 0 0;
+}
+.theproduct .containerimgproduct{
+	width:200px;
+	height:130px;
+	overflow:hidden;
+	
+}
+.theproduct img{
+	width:200px;
+}
+.theproduct p{
+	width:200px;
+	height:90px;
+	margin:0;
+	overflow:hidden;
+	font-size:13px;
+	text-align:justify;
+}
+.theproduct .buttonproduct{
+	width:200px;
+	height:50px;
+	background-color:#96201d;
+	text-align:center;
+	line-height:50px;
+	color:white;
+	border-radius:10px;
+}
+.theproduct .buttonproduct a{
+	color:white;
+	text-decoration:none;
+	font-size:24px;
+}
+
+/*7.Formulaire pré-commande*/
+.containerformcommande{
+	width:100%;
+}
+.containerformcommande h5{
+	text-align:center;
+	margin:20px 0 20px 0;
+	font-size:30px;
+	color:#96201d;
+}
+.containerformcommande form{
+	background:url('../images/home/bgform.jpg');
+	width:100%;
+	background-repeat:no-repeat;
+	background-position:center;
+	margin:auto;
+}
+.containerformcommande form div{
+	width:320px;
+	margin:auto;
+}
+.containerformcommande form label{
+	color:white;
+	padding-top:10px;
+	margin-bottom:10px;
+	display:block;
+	font-size:24px;
+}
+.containerformcommande form input:nth-child(-n+16){
+	width:100%;
+	margin-bottom:10px;
+	display:block;
+	height:20px;
+}
+.containerformcommande form input:last-child{
+	width:40%;
+	margin:10px auto 0 auto;
+	display:block;
+	height:40px;
+	border-radius:5px;
+	background-color:white;
+	border:1px solid #2a2a2a;
+	font-size:17px;
+	
+}
+.containerformcommande form select{
+	width:100%;
+	margin-bottom:10px;
+	display:block;
+	height:20px;
+}
+.containerformcommande form textarea{
+	width:100%;
+	margin-bottom:10px;
+	display:block;
+	height:80px;
+	max-width:100%;
+}
+.containerformcommande form span{
+	color:white;
+}
+
+/*8.Footer*/
+.footer{
+	width:100%;
+	background-color:#96201d;
+	
+}
+.footer .containerms{
+	width:180px;
+	margin:auto;
+	padding-top:20px;
+	padding-bottom:10px;
+	
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	align-items:center;
+}
+.footer p{
+	text-align:center;
+	color:white;
+	margin:0;
+	padding-bottom:10px;
+}
+.footer p a{
+	color:white;
+	text-decoration:none;
 }
