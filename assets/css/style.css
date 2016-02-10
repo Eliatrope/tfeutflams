@@ -379,6 +379,7 @@ body{
 	background-color:white;
 	border:1px solid #2a2a2a;
 	font-size:17px;
+	cursor:pointer;
 	
 }
 .containerformcommande form select{

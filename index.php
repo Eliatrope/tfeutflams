@@ -25,6 +25,7 @@
 		<title></title>
 		<meta name="description" content="">
 		<link href="assets/css/style.css" type="text/css" rel="stylesheet" />
+		<link href="assets/css/styletablette.css" type="text/css" rel="stylesheet" />
 	</head>
 	
 	
