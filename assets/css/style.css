@@ -225,6 +225,45 @@ body{
 	margin:5px auto 0 auto;
 	border:1px solid white;
 }
+.actualites{
+	width:100%;
+	margin-top: -35px;
+}
+.actualites img{
+	width:100%;
+	margin:auto;
+	display:block;
+}
+
+.actualites h1{
+	font-size:32px;
+	text-align:center;
+	padding:20px 0 20px 0;
+	margin:0;
+	height:40px;
+	overflow:hidden;
+}
+.actualites p{
+	width:1OO%;
+	margin: 0 15px 25px 15px;
+	text-align:justify;
+	height:152px;
+	overflow:hidden;
+}
+.buttoncontaineractualites{
+	float: right;
+	width:120px;
+	height:25px;
+	font-size:18px;
+	border-radius:10px;
+	background-color:#96201d;
+	color:white;
+	text-align:center;
+	line-height:22px;
+	border:1px solid white;
+	margin-top: -50px;
+}
+
 
 /*5.Gmaps/Module géolocalisation*/
 .containerrdv{

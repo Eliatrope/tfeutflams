@@ -22,25 +22,6 @@
 			<?php 
 				include_once "assets/php/header.php";
 			?>
-			<article class="actualites clearfix">
-				<?php
-					foreach($actu as $a){
-						echo 
-							'<img src="assets/images/article/'.$a->main_image.'"/>'.
-							'<h1>'.$a->title.'</h1>'.
-							'<p>'.
-								$a->content.
-							'</p>'.
-							'<a href="article.php?id='.$a->id.'">'.
-								'<div class="buttoncontaineractualites">'.
-									'Lire la suite'.
-								'</div>'.
-							'</a>'
-						;
-					}
-				?>
-			</article>
-			
 			
 			<?php
 				include_once "assets/php/footer.php";
