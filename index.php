@@ -102,28 +102,28 @@
 					<h3>NOS PRODUITS</h3>
 				</div>
 				<div class="containerproduits">
-				<?php
-					foreach($flams as $f){
-						echo
-							'<div class="arrow leftarrow" id="'.$f->id.'"></div>'.
-							'<article class="theproduct" id="'.$f->id.'">'.
-								'<div class="containertitleproduct">'.
-									'<h4>'.$f->nom.'</h4>'.
-								'</div>'.
-								'<div class="containerimgproduct">'.
-									'<img src="'.$f->img.'"/>'.
-								'</div>'.
-								'<p>'.
-									$f->description.
-								'</p>'.
-								'<div class="buttonproduct">'.
-									'<a href="produits.php">En savoir plus</a>'.
-								'</div>'.
-							'</article>'.
-							'<div id="'.$f->id.'"class="arrow rightarrow"></div>'
-						;
-					}
-				?>	
+					<div class="containeroverflowproduct">
+						<?php
+							foreach($flams as $f){
+								echo
+									'<article class="theproduct" id="'.$f->id.'">'.
+										'<div class="containertitleproduct">'.
+											'<h4>'.$f->nom.'</h4>'.
+										'</div>'.
+										'<div class="containerimgproduct">'.
+											'<img src="assets/images/flams/'.$f->img.'" alt="'.$f->nom.'" title="'.$f->nom.'"/>'.
+										'</div>'.
+										'<p>'.
+											$f->description.
+										'</p>'.
+										'<div class="buttonproduct">'.
+											'<a href="produits.php">En savoir plus</a>'.
+										'</div>'.
+									'</article>'
+								;
+							}
+						?>
+					</div>
 				</div>
 				<div class="containerformcommande">
 					<h5>ENVIE D'UNE<br>SOIRÉE FLAM'S?</h5>

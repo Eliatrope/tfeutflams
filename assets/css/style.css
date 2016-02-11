@@ -25,6 +25,18 @@ body{
 .hugecontainer{
 	width:100%;
 }
+::-webkit-scrollbar{
+	width:12px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
 
 /*1.1Fonts*/
 @font-face {
@@ -39,6 +51,7 @@ body{
     font-style: normal;
 
 }
+
 /*2.ERROR 666*/
 .just{
 	width:500px;
@@ -96,7 +109,7 @@ body{
 
 /*3.Header*/
 .header{
-	width: 100%;
+	width:100%;
 	position:relative;
 	background:url('../images/home/bgardoisetablette.jpg');
 	background-position:center;
@@ -104,12 +117,13 @@ body{
 	margin:0 auto 35px auto;
 }
 .containerwrap{
+	width: 100%;
 	height:92px;
+	
 	display:flex;
 	flex-flow:row wrap;
 	justify-content:space-around;
 	align-items:center;
-	width: 100%;
 }
 .header a{
 	display:block;
@@ -170,7 +184,7 @@ body{
 
 /*4.Actualités*/
 .containeractu{
-	width: 100%;
+	width:100%;
 	background-color:#2a2a2a;
 	margin:0px auto 10px auto;
 	color:white;
@@ -191,9 +205,6 @@ body{
 	margin:auto;
 	display:block;
 	opacity:.9;
-}
-.containeractu img:hover{
-	opacity:1;
 }
 .containeractu p{
 	width:285px;
@@ -277,16 +288,24 @@ body{
 .containerproduits{
 	height:470px;
 	background-color:#2a2a2a;
+}
+.containeroverflowproduct{
+	margin:auto;
+	width:230px;
+	height:470px;
+	overflow-y:hidden;
 	
 	display:flex;
-	flex-flow:row wrap;
-	justify-content:space-around;
+	flex-flow:row;
+	justify-content:space-between;
 	align-items:center;
 }
 .theproduct{
 	width:230px;
 	height:410px;
 	background-color:white;
+	margin:0 20px 0 20px;
+	border-radius:5px;
 	
 	display:flex;
 	flex-flow:row wrap;
@@ -303,6 +322,7 @@ body{
 	font-size:25px;
 	color:white;
 	margin:3px 0 0 0;
+	padding:0 25px 0 25px;
 }
 .theproduct .containerimgproduct{
 	width:200px;
@@ -314,7 +334,7 @@ body{
 	width:200px;
 }
 .theproduct p{
-	width:200px;
+	width: 90%;
 	height:90px;
 	margin:0;
 	overflow:hidden;
@@ -421,6 +441,7 @@ body{
 	color:white;
 	margin:0;
 	padding-bottom:10px;
+	font-size:14px;
 }
 .footer p a{
 	color:white;

@@ -1,3 +1,11 @@
-@media all and (min-width:480px) and (max-width:720px){
-	
+@media all and (min-width:670px) and (max-width:720px){
+	.containeractu img, .containeractu p, .containeroverflowproduct, .containerformcommande form div{
+		width:670px;
+	}
+	.containeractu p{
+		height:220px;
+	}
+	#map{
+		height:400px;
+	}
 }
