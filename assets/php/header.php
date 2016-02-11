@@ -5,7 +5,7 @@
 	</div>
 	<aside class="menupop" id="menupop">
 		<ul>
-			<a href=""><li>ACTUALITÉS</li></a>
+			<a href="../../actualites.php"><li>ACTUALITÉS</li></a>
 			<a href=""><li>NOS PRODUITS</li></a>
 			<a href=""><li>PRÉ-COMMANDE</li></a>
 			<a href=""><li>IL ÉTAIT UNE FLAM’S</li></a>
