@@ -181,6 +181,9 @@ body{
 	left:-17px;
 	cursor:pointer;
 }
+.menuweb{
+	display:none;
+}
 
 /*4.Actualités*/
 .containeractu{
@@ -191,6 +194,7 @@ body{
 }
 .containeractu a{
 	text-decoration:none;
+	color:white;
 }
 .containeractu h1{
 	font-size:32px;

@@ -15,3 +15,13 @@
 		<div class="menuclose" id="menuclose">X</div>
 	</aside>
 </header>
+<aside class="menuweb">
+	<ul>
+		<a href="actualites.php"><li>ACTUALITÉS</li></a>
+		<a href=""><li>NOS PRODUITS</li></a>
+		<a href=""><li>PRÉ-COMMANDE</li></a>
+		<a href=""><li>IL ÉTAIT UNE FLAM’S</li></a>
+		<a href=""><li>GALERIE PHOTO</li></a>
+		<a href=""><li>AVIS CLIENT</li></a>
+	</ul>
+</aside>

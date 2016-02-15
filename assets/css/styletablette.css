@@ -1,4 +1,7 @@
-@media all and (min-width:670px) and (max-width:720px){
+@media all and (min-width:670px) and (max-width:1200px){
+	.header{
+		background:url('../images/home/bgardoise.jpg');
+	}
 	.containeractu img, .containeractu p, .containeroverflowproduct, .containerformcommande form div{
 		width:670px;
 	}
@@ -7,5 +10,11 @@
 	}
 	#map{
 		height:400px;
+	}
+	.containerformcommande form{
+		background:url('../images/home/bgformweb.jpg');
+	}
+	.menuweb{
+		display:none;
 	}
 }

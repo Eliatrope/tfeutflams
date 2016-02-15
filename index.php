@@ -26,6 +26,7 @@
 		<meta name="description" content="">
 		<link href="assets/css/style.css" type="text/css" rel="stylesheet" />
 		<link href="assets/css/styletablette.css" type="text/css" rel="stylesheet" />
+		<link href="assets/css/styleweb.css" type="text/css" rel="stylesheet" />
 	</head>
 	
 	
@@ -47,7 +48,7 @@
 				<?php
 					foreach($actu as $a){
 						echo 
-							'<h1>'.$a->title.'</h1>'.
+							'<a href="article.php?id='.$a->id.'"><h1>'.$a->title.'</h1></a>'.
 							'<img src="assets/images/article/'.$a->main_image.'"/>'.
 							'<p>'.
 								$a->content.
@@ -148,9 +149,9 @@
 								<input type="text" name="place" id="place" placeholder="Merci de saisir le lieu de réservation"/>
 							<label for="comm">Commentaire(facultatif)</label>
 							<textarea id="comm" name="comm">Plus d'informations à nous donner ?</textarea>
+								<div class="cb"></div>
 							<span>Les champs marqués d'un * sont obligatoires</span>
 							<input type="submit" value="Envoyer"/>
-							
 						</div>
 						<br>
 					</form>

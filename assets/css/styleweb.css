@@ -1,0 +1,74 @@
+@media all and (min-width:1201px){
+	.header{
+		margin-bottom:15px;
+		background:url('../images/home/bgardoise.jpg');
+		background-position:center;
+		background-repeat:no-repeat;
+	}
+	.menupop, .hammenu{
+		display:none;
+	}
+	.menuweb{
+		display:block;
+		width:1200px;
+		margin:auto;
+		margin-bottom:15px;
+	}
+	.menuweb ul{
+		margin:0;
+		padding:0;
+		list-style-type:none;
+		
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:space-around;
+		align-items:center;
+	}
+	.menuweb ul a{
+		text-decoration:none;
+		color:black;
+		font-weight:bold;
+	}
+	.containeractu, .containerrdv, .containertitleproduits, .navgeoloc, #map, .containerproduits, .containeroverflowproduct, .containerformcommande form div, .containerformcommande, .footer{
+		width:1200px;
+		margin:auto;
+	}
+	#map{
+		height:340px;
+	}
+	.containerformcommande form{
+		background:url('../images/home/bgformweb2.jpg');
+		background-position:center;
+		background-repeat:no-repeat;
+		
+		display:flex;
+		flex-flow:row wrap;
+		justify-content:space-around;
+		align-items:center;
+	}
+	.containerformcommande form input:nth-child(-n+16), .containerformcommande form select, .containerformcommande form textarea, .containerformcommande form label{
+		width:90%;
+		margin:auto;
+	}
+	.containerformcommande form input:last-child{
+		width:15%;
+	
+	}
+	.containerformcommande form span{
+		width:90%;
+		display:block;
+		margin:10px auto 0 auto;
+	}
+	.containeractu img{
+		width:45%;
+		display:inline-block;
+		margin-right:1.5%;
+		margin-left:1.5%;
+	}
+	.containeractu p{
+		width:50%;
+		display:inline-block;
+		font-size:22px;
+		height:365px;
+	}
+}
