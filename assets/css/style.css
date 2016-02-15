@@ -11,6 +11,7 @@
 6.Nos produits
 7.Formulaire pré-commande
 8.Footer
+9.Galerie photo
 *********************************/
 
 /*1.Constants and variables*/
@@ -489,4 +490,34 @@ body{
 .footer p a{
 	color:white;
 	text-decoration:none;
+}
+
+/*9.Galerie photo*/
+.containergalerie{
+	width:100%;
+	
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-around;
+	align-items:center;
+}
+.containergalerieimg{
+	width:100%;
+	margin:10px auto 10px auto;
+	overflow:hidden;
+}
+.containergalerieimg img{
+	width:100%;
+	cursor:pointer;
+}
+.viewmoregalerie{
+	font-size: 0px; line-height: 0%; width: 0px;
+	border-top: 30px solid #2a2a2a;/* couleur du triangle*/
+	border-left: 30px solid transparent; 
+	border-right: 30px solid transparent; 
+	z-index:999;
+	cursor:pointer;
+	margin:auto;
+	margin-top:20px;
+	margin-bottom:20px;
 }

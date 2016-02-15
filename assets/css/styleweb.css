@@ -29,7 +29,7 @@
 		color:black;
 		font-weight:bold;
 	}
-	.containeractu, .containerrdv, .containertitleproduits, .navgeoloc, #map, .containerproduits, .containeroverflowproduct, .containerformcommande form div, .containerformcommande, .footer{
+	.containeractu, .containerrdv, .containertitleproduits, .navgeoloc, #map, .containerproduits, .containeroverflowproduct, .containerformcommande form div, .containerformcommande, .footer, .containergalerie{
 		width:1200px;
 		margin:auto;
 	}
@@ -70,5 +70,14 @@
 		display:inline-block;
 		font-size:22px;
 		height:365px;
+	}
+	.containergalerieimg{
+		width:33%;
+		height:265px;
+		margin-top:2px;
+		margin-bottom:2px;
+	}
+	.containergalerie img{
+		width:100%;
 	}
 }

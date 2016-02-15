@@ -2,8 +2,9 @@
 	.header{
 		background:url('../images/home/bgardoise.jpg');
 	}
-	.containeractu img, .containeractu p, .containeroverflowproduct, .containerformcommande form div{
+	.containeractu img, .containeractu p, .containeroverflowproduct, .containerformcommande form div, .containergalerie{
 		width:670px;
+		margin:auto;
 	}
 	.containeractu p{
 		height:220px;
@@ -16,5 +17,12 @@
 	}
 	.menuweb{
 		display:none;
+	}
+	.containergalerieimg{
+		width:45%;
+		height:202px;
+	}
+	.containergalerie img{
+		width:100%;
 	}
 }

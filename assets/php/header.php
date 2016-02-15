@@ -1,3 +1,4 @@
+<!-- Penser à bien mettre les liens dans les deux menus!-->
 <header class="header">
 	<div class="containerwrap">
 		<img src="assets/images/home/menu.png" alt="Bouton menu Tout Feu Tout Flam's" title="Ouvrir le menu Tout Feu Tout Flam's" class="hammenu" id="menuopen"/>
@@ -9,7 +10,7 @@
 			<a href=""><li>NOS PRODUITS</li></a>
 			<a href=""><li>PRÉ-COMMANDE</li></a>
 			<a href=""><li>IL ÉTAIT UNE FLAM’S</li></a>
-			<a href=""><li>GALERIE PHOTO</li></a>
+			<a href="galerie.php"><li>GALERIE PHOTO</li></a>
 			<a href=""><li>AVIS CLIENT</li></a>
 		</ul>
 		<div class="menuclose" id="menuclose">X</div>
@@ -21,7 +22,7 @@
 		<a href=""><li>NOS PRODUITS</li></a>
 		<a href=""><li>PRÉ-COMMANDE</li></a>
 		<a href=""><li>IL ÉTAIT UNE FLAM’S</li></a>
-		<a href=""><li>GALERIE PHOTO</li></a>
+		<a href="galerie.php"><li>GALERIE PHOTO</li></a>
 		<a href=""><li>AVIS CLIENT</li></a>
 	</ul>
 </aside>
