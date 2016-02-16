@@ -80,4 +80,11 @@
 	.containergalerie img{
 		width:100%;
 	}
+	.containerslidepres{
+		width:1200px;
+		height:460px;
+	}
+	.containertxtpres{
+		width:1200px;
+	}
 }

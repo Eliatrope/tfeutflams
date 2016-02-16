@@ -15,6 +15,9 @@
 	.containerformcommande form{
 		background:url('../images/home/bgformweb.jpg');
 	}
+	.containerformcommande form textarea{
+		margin-left:0;
+	}
 	.menuweb{
 		display:none;
 	}
@@ -24,5 +27,8 @@
 	}
 	.containergalerie img{
 		width:100%;
+	}
+	.containerslidepres{
+		height:310px;
 	}
 }
