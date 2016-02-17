@@ -6,7 +6,7 @@
 2.Menu latéral[navigation admin]
 3.Ingrédients
 4.Calendar
-
+5.YellowText Doc here 	https://github.com/stefanvermaas/yellow-text
 *********************************/
 
 /*1.Constants and variables*/
@@ -70,10 +70,18 @@ body{
 	width:100px;
 }
 .actioning{
-	
+	margin:0 5px 0 5px;
+	cursor:pointer;
 }
 /*4. Calendar*/
 .containercalendar{
 	width: 40%;
 	margin:auto;
+}
+
+/*5.YellowText*/
+#yellowtext{
+	width:50%;
+	margin:auto;
+	display:block;
 }

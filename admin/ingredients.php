@@ -61,8 +61,8 @@
 									$i->nom.'" title="'.$i->nom.'" />'.
 								'</td>'.
 								'<td>'.
-									'<img class="actioning"/>'.
-									'<img class="actioning" />'.
+									'<a href="edit.php"><img class="actioning" src="assets/images/edit.png" alt="modifier" title="modifier"/></a>'.
+									'<a href="delete.php"><img class="actioning" src="assets/images/delete.png" alt="supprimer" title="supprimer"/></a>'.
 								'</td>'.
 							'</tr>'
 						;

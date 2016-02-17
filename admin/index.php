@@ -21,7 +21,7 @@
 	<body>
 		<section class="maincontainer">
 		<?php
-			if(isset($_SESSION['connect'])){//Dégueu' le @ mais pas d'autres solutions...
+			if(isset($_SESSION['connect'])){
 				include_once 'assets/php/menu.php';
 				echo 
 					"<div class=\"cb\"></div>".
