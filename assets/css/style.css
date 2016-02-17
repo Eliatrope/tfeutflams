@@ -8,12 +8,13 @@
 3.Header
 4.Actualités
 5.Gmaps/Module géolocalisation
-6.Nos produits
+6.Nos produits[home]
 7.Formulaire pré-commande
 8.Footer
 9.Galerie photo
 10.Présentation | Il était une flam's c:
 11.Article
+12.Produits
 *********************************/
 
 /*1.Constants and variables*/
@@ -284,7 +285,7 @@ body{
 .containerrdv h2{
 	font-size:18px;
 	color:white;
-	margin:10px 0 0 0;
+	margin:0;
 }
 #map{
 	width: 100%;
@@ -317,10 +318,9 @@ body{
 	transform:rotate(-90deg);
 }
 
-/*6.Nos produits*/
+/*6.Nos produits[home]*/
 .containertitleproduits{
 	width: 100%;
-	height:55px;
 	background-color:#96201d;
 	margin:auto;
 }
@@ -329,7 +329,7 @@ body{
 	font-size:30px;
 	color:white;
 	text-align:center;
-	margin:10px 0 0 0;
+	margin:0;
 }
 .containerproduits{
 	height:470px;
@@ -435,6 +435,7 @@ body{
 	margin-bottom:10px;
 	display:block;
 	height:20px;
+	opacity:.95;
 }
 .containerformcommande form input:last-child{
 	width:40%;
@@ -446,13 +447,14 @@ body{
 	border:1px solid #2a2a2a;
 	font-size:17px;
 	cursor:pointer;
-	
+	opacity:.95;
 }
 .containerformcommande form select{
 	width:100%;
 	margin-bottom:10px;
 	display:block;
 	height:20px;
+	opacity:.95;
 }
 .containerformcommande form textarea{
 	width:100%;
@@ -460,6 +462,7 @@ body{
 	display:block;
 	height:80px;
 	max-width:100%;
+	opacity:.95;
 }
 .containerformcommande form span{
 	color:white;
@@ -593,5 +596,16 @@ body{
 	color:#96201d;
 	display:block;
 	margin:10px 0 10px 0;
-	
+}
+
+/*12.Produits*/
+.containertitleformules{
+	background-color:#96201d;
+}
+.containertitleformules h3{
+	line-height:55px;
+	font-size:20px;
+	color:white;
+	text-align:center;
+	margin:0;
 }
