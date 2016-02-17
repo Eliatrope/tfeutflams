@@ -15,6 +15,7 @@
 		<meta name="description" content="">
 		<link href="assets/css/style.css" type="text/css" rel="stylesheet" />
 		<link href="assets/css/styletablette.css" type="text/css" rel="stylesheet" />
+		<link href="assets/css/styleweb.css" type="text/css" rel="stylesheet" />
 	</head>
 	
 	<body>
@@ -22,23 +23,24 @@
 			<?php 
 				include_once "assets/php/header.php";
 			?>
-			<article class="actualites clearfix">
+			<article class="containeractu">
 				<?php
 					foreach($actu as $a){
 						echo 
+							'<a href="article.php?id='.$a->id.'"><h1>'.$a->title.'</h1></a>'.
 							'<img src="assets/images/article/'.$a->main_image.'"/>'.
-							'<h1>'.$a->title.'</h1>'.
 							'<p>'.
 								$a->content.
 							'</p>'.
 							'<a href="article.php?id='.$a->id.'">'.
-								'<div class="buttoncontaineractualites">'.
+								'<div class="buttoncontaineractu">'.
 									'Lire la suite'.
 								'</div>'.
 							'</a>'
 						;
 					}
 				?>
+				<br />
 			</article>
 			
 			
