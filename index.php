@@ -118,7 +118,7 @@
 											$f->description.
 										'</p>'.
 										'<div class="buttonproduct">'.
-											'<a href="produits.php">En savoir plus</a>'.
+											'<a href="produit.php">En savoir plus</a>'.
 										'</div>'.
 									'</article>'
 								;
