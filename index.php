@@ -1,15 +1,62 @@
 <?php
 	require_once 'assets/php/connexion.php';
 	
+	//Date d'aujourd'hui
+	setlocale(LC_TIME, 'fr_FR.utf8','fra');
+	
+	$todayfr = utf8_encode(strftime("%A %d %B %Y"));
+	$today = date('Y-m-d');
+					
+	//Date dans 1 jours
+	$Jplus1fr = utf8_encode(strftime('%A %d %B %Y', strtotime('+1 day')));
+							
+	$Jplus1 = date('Y-m-d', strtotime('+1 day'));
+							
+							
+	//Date dans 2 jours
+	$Jplus2fr = utf8_encode(strftime('%A %d %B %Y', strtotime('+2 day')));
+							
+	$Jplus2 = date('Y-m-d', strtotime('+2 day'));
+							
+							
+	//Date dans 3 jours
+	$Jplus3fr = utf8_encode(strftime('%A %d %B %Y', strtotime('+3 day')));
+							
+	$Jplus3 = date('Y-m-d', strtotime('+3 day'));
+							
+	//Date dans 4 jours
+	$Jplus4fr = utf8_encode(strftime('%A %d %B %Y', strtotime('+4 day')));
+							
+	$Jplus4 = date('Y-m-d', strtotime('+4 day'));
+							
+	//Date dans 5 jours
+	$Jplus5fr = utf8_encode(strftime('%A %d %B %Y', strtotime('+5 day')));
+							
+	$Jplus5 = date('Y-m-d', strtotime('+5 day'));
+							
+	//Date dans 6 jours
+	$Jplus6fr = utf8_encode(strftime('%A %d %B %Y', strtotime('+6 day')));
+							
+	$Jplus6 = date('Y-m-d', strtotime('+6 day'));
+							
+	//Date dans 7 jours
+	$Jplus7fr = utf8_encode(strftime('%A %d %B %Y', strtotime('+7 day')));
+							
+	$Jplus7 = date('Y-m-d', strtotime('+7 day'));
+	
+	//Récupération géolocalisation
+	/*$sql="SELECT * FROM emplacement";
+	$resultat=$connexion->query($sql);
+	$emplacement=$resultat->fetchAll(PDO::FETCH_OBJ);*/
+	
+	$jointure = "SELECT * FROM emplacement e INNER JOIN gmaps g ON e.jour = g.jour WHERE e.jour BETWEEN '$today' AND '$Jplus7'";
+	$results = $connexion->query($jointure);
+	$emplacement = $results->fetchAll(PDO::FETCH_OBJ);
+	
 	//Récupération actualité
 	$sql="SELECT * FROM actualite ORDER BY id DESC LIMIT 1";
 	$result=$connexion->query($sql);
 	$actu=$result->fetchAll(PDO::FETCH_OBJ);
-	
-	//Récupération géolocalisation
-	$sql="SELECT * FROM emplacement";
-	$resultat=$connexion->query($sql);
-	$emplacement=$resultat->fetchAll(PDO::FETCH_OBJ);
 	
 	//Récupération flams
 	$sql="SELECT * FROM flams";
@@ -70,31 +117,61 @@
 			<div id="map"></div>
 			
 			<aside class="navgeoloc">
-				<div class="leftarrow arrow"></div>
-				<p>Lundi 08 février 2016</p>
-				<div class="rightarrow arrow"></div>
+				<p>
+					<!--Trop compliqué de filtrer, j'abandonne l'idée-->
+					<!--<form action="index.php" method="POST">
+						<select name="filtre" class="filtre">
+							<option value="0" selected>Voir pour toute la semaine</option>
+						-->
+							<?php
+								/*
+							
+							
+							
+							
+							
+									
+								$sql="SELECT * FROM gmaps WHERE jour BETWEEN '$today' AND '$Jplus7'";
+								$resultat=$connexion->query($sql);
+								$gmaps=$resultat->fetchAll(PDO::FETCH_OBJ);
+								
+								
+								foreach($gmaps as $g){
+									
+									echo
+										'<option value="'.$g->jour.'">'.$g->date.'</option>'	
+									;	
+								}
+								*/
+								echo 'Du '.$todayfr.' au '.$Jplus7fr;
+							?>
+						<!--</select>
+					</form>-->
+					
+					</p>
 			</aside>
+			
 			
 			<script src="https://maps.googleapis.com/maps/api/js"></script>
 			<script src="assets/js/gmaps.js"></script>
 			<script src="assets/js/global.js"></script>
-				<script>
+			<script>
 					<?php
 						foreach($emplacement as $e){
-							echo
-								"map.addMarker({".
-									"lat: ".$e->latitude.",".
-									"lng: ".$e->longitude.",".
-									"title: '".$e->ville."',".
-									"infoWindow: {".
-										"content: '".$e->ville, $e->adresse."'".
-									"},".
-									"click: function(e) {".
-										"map.setCenter({lat: ".$e->latitude.", lng: ".$e->longitude."});".
-									"},".
-									"icon: './assets/images/home/littlelogo.png',".
-								"});"
-							;
+								echo
+									"map.addMarker({".
+										"lat: ".$e->latitude.",".
+										"lng: ".$e->longitude.",".
+										"title: '".$e->ville."',".
+										"infoWindow: {".
+											"content: '<h1 class=\"titledate\">".$e->date."</h1><p class=\"pdate\">".$e->adresse."</p><p class=\"pdate\">". $e->cp, $e->ville."</p>'".
+										"},".
+										"click: function(e) {".
+											"map.setCenter({lat: ".$e->latitude.", lng: ".$e->longitude."});".
+										"},".
+										"icon: './assets/images/home/littlelogo.png',".
+									"});"
+								;
 						}
 					?>
 				</script>
@@ -163,5 +240,6 @@
 		
 		<script src="assets/js/jquery-2.2.0.min.js"></script>
 		<script src="assets/js/menu.js"></script>
+		
 	</body>
 </html>

@@ -46,11 +46,11 @@
 								<input type="text" name="pseudo" id="pseudo" placeholder="Merci de saisir votre pseudonyme" required />
 							<label for="note">Note*</label>
 								<select id="note" name="note">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
 									<option value="5">5</option>
+									<option value="4">4</option>
+									<option value="3">3</option>
+									<option value="2">2</option>
+									<option value="1">1</option>
 								</select>
 							<label for="mail">Adresse mail*</label>
 								<input type="text" name="mail" id="mail" placeholder="Merci de saisir votre adresse mail" required />
