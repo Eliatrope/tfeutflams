@@ -408,6 +408,8 @@ body{
 	color:white;
 	border-radius:10px;
 	cursor:pointer;
+	border:none;
+	outline:none;
 }
 .theproduct .buttonproduct a{
 	color:white;
@@ -612,15 +614,80 @@ body{
 }
 
 /*12.Produits*/
-.containertitleformules{
-	background-color:#96201d;
-}
 .containertitleformules h3{
 	line-height:55px;
 	font-size:20px;
+	color:#96201d;
+	text-align:center;
+	margin:0;
+}
+.containerformule{
+	margin:0 auto 20px auto;
+}
+.containerformule h4{
+	line-height:43px;
+	text-align:center;
+	background-color:#96201d;
+	color:white;
+	margin:0;
+	font-size:24px;
+}
+.containerformulediv{
+	background-color:#2a2a2a;
+}
+.containerformulediv img{
+	width:90%;
+	margin:0 auto 30px auto;
+	padding-top:10px;
+	display:block;
+}
+.egalbarre{
+	width:50px;
+	height:12px;
+	background-color:white;
+	margin:10px auto 10px auto;
+}
+.containerformulediv p{
+	text-align:center;
+	color:white;
+	font-size:70px;
+	margin:20px 0 0 0;
+}
+.containerformulesprecision{
+	background-color:#96201d;
+	color:white;
+	text-align:center;
+}
+.containerformulesprecision p{
+	padding-top:15px;
+	margin:0;
+	height:55px;
+}
+.containerflamsprod{
+	margin:0 auto 15px auto;
+}
+.containerflamsprod h6{
+	background-color:#96201d;
 	color:white;
 	text-align:center;
 	margin:0;
+	line-height:30px;
+	font-size:25px;
+}
+.containerflamsprod img{
+	width:100%;
+}
+.containerflamsprod p{
+	width:98%;
+	margin:auto;
+	font-size:20px;
+}
+.containerflamsprod span{
+	display:block;
+	color:#96201d;
+	width:98%;
+	margin:auto;
+	font-size:22px;
 }
 
 /*13.Avis client*/

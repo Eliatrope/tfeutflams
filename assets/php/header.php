@@ -8,7 +8,7 @@
 		<ul>
 			<a href="actualites.php"><li>ACTUALITÉS</li></a>
 			<a href="produit.php"><li>NOS PRODUITS</li></a>
-			<a href=""><li>PRÉ-COMMANDE</li></a>
+			<a href="commande.php"><li>PRÉ-COMMANDE</li></a>
 			<a href="presentation.php"><li>IL ÉTAIT UNE FLAM’S</li></a>
 			<a href="galerie.php"><li>GALERIE PHOTO</li></a>
 			<a href="avis.php"><li>AVIS CLIENT</li></a>
@@ -20,7 +20,7 @@
 	<ul>
 		<a href="actualites.php"><li>ACTUALITÉS</li></a>
 		<a href="produit.php"><li>NOS PRODUITS</li></a>
-		<a href=""><li>PRÉ-COMMANDE</li></a>
+		<a href="commande.php"><li>PRÉ-COMMANDE</li></a>
 		<a href="presentation.php"><li>IL ÉTAIT UNE FLAM’S</li></a>
 		<a href="galerie.php"><li>GALERIE PHOTO</li></a>
 		<a href="avis.php"><li>AVIS CLIENT</li></a>
