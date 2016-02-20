@@ -117,4 +117,7 @@
 	.containerflamsprod p:nth-child(3){
 		margin-top:10px;
 	}
+	.containerflamsprod h6{
+		line-height:60px;
+	}
 }

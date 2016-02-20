@@ -49,7 +49,7 @@
 	$resultat=$connexion->query($sql);
 	$emplacement=$resultat->fetchAll(PDO::FETCH_OBJ);*/
 	
-	$jointure = "SELECT * FROM emplacement e INNER JOIN gmaps g ON e.jour = g.jour WHERE e.jour BETWEEN '$today' AND '$Jplus7'";
+	$jointure = "SELECT * FROM gmaps g INNER JOIN emplacement e ON g.fk_emplacement = e.id WHERE g.jour BETWEEN '$today' AND '$Jplus7'";
 	$results = $connexion->query($jointure);
 	$emplacement = $results->fetchAll(PDO::FETCH_OBJ);
 	
@@ -164,7 +164,7 @@
 										"lng: ".$e->longitude.",".
 										"title: '".$e->ville."',".
 										"infoWindow: {".
-											"content: '<h1 class=\"titledate\">".$e->date."</h1><p class=\"pdate\">".$e->adresse."</p><p class=\"pdate\">". $e->cp, $e->ville."</p>'".
+											"content: '<h1 class=\"titledate\">".$e->date."</h1><p class=\"pdate\">".$e->adresse."</p><p class=\"pdate\">". $e->cp, $e->ville."</p><p class=\"pdate\">".$e->heure."</p>'".
 										"},".
 										"click: function(e) {".
 											"map.setCenter({lat: ".$e->latitude.", lng: ".$e->longitude."});".
