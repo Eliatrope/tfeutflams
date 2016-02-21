@@ -63,14 +63,25 @@
 	$resultats=$connexion->query($sql);
 	$flams=$resultats->fetchAll(PDO::FETCH_OBJ);
 	
+	//Récupération SEO
+	$sql="SELECT * FROM seo WHERE page='index'";
+	$resultat=$connexion->query($sql);
+	$seo=$resultat->fetchAll(PDO::FETCH_OBJ);
+	
 ?>
 <!--Astuce du jour: https://developers.google.com/web/tools/setup/setup-workflow. Pour ne plus avoir à reload le navigateur quant on fait des modifs dans les fichiers-->
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title></title>
-		<meta name="description" content="">
+		<?php
+			foreach($seo as $s){
+				echo
+					'<title>'.$s->title.'</title>'.
+					'<meta name="description" content="'.$s->meta_description.'">'
+				;
+			}
+		?>
 		<link href="assets/css/style.css" type="text/css" rel="stylesheet" />
 		<link href="assets/css/styletablette.css" type="text/css" rel="stylesheet" />
 		<link href="assets/css/styleweb.css" type="text/css" rel="stylesheet" />
@@ -95,7 +106,7 @@
 				<?php
 					foreach($actu as $a){
 						echo 
-							'<a href="article.php?id='.$a->id.'"><h1>'.$a->title.'</h1></a>'.
+							"<a href='article.php?id=".$a->id."'><h1>".$a->title."</h1></a>".
 							'<img src="assets/images/article/'.$a->main_image.'"/>'.
 							'<p>'.
 								$a->content.
@@ -164,7 +175,7 @@
 										"lng: ".$e->longitude.",".
 										"title: '".$e->ville."',".
 										"infoWindow: {".
-											"content: '<h1 class=\"titledate\">".$e->date."</h1><p class=\"pdate\">".$e->adresse."</p><p class=\"pdate\">". $e->cp, $e->ville."</p><p class=\"pdate\">".$e->heure."</p>'".
+											"content: \"<h1 class=\'titledate\'>".$e->date."</h1><p class=\'pdate\'>".$e->adresse."</p><p class=\'pdate\'>". $e->cp, $e->ville."</p><p class=\'pdate\'>".$e->heure."</p>\"".
 										"},".
 										"click: function(e) {".
 											"map.setCenter({lat: ".$e->latitude.", lng: ".$e->longitude."});".

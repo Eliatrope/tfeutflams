@@ -2,7 +2,7 @@
 
 $(document).ready(function() {
 
-    var monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+    var monthNames = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"];
 
     var dayNames = ["Lu", "Ma", "Me", "Je", "Ve", "Sa", "Di"];
 
@@ -21,11 +21,11 @@ $(document).ready(function() {
         },{
 			//Penser à virer les 0...
 			date: "8/2/2016",
-            title: 'Test flam\'s',
+            title: "Test flam's",
             link: '',
             linkTarget: '_blank',
             color: '',
-            content: 'Petite flam\'s',
+            content: "Petite flam's",
             class: '',
             displayMonthController: true,
             displayYearController: true,

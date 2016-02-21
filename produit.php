@@ -77,6 +77,7 @@
 						}
 					?>
 				</div>
+					<div class="cb"></div>
 				<div class="containertitleformules">
 					<h3>NOS FORMULES SOIRÉE FLAM'S À VOLONTÉ*</h3>
 				</div>

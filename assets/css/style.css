@@ -16,6 +16,11 @@
 11.Article
 12.Produits
 13.Avis client
+
+14.Administration|Index
+15.Administration|SEO
+16.Administration|Avis client
+17.Administration|Calendar
 *********************************/
 
 /*1.Constants and variables*/
@@ -41,9 +46,50 @@ body{
     border-radius: 10px;
 }
  
-::-webkit-scrollbar-thumb {
+::-moz-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+::-moz-scrollbar{
+	width:12px;
+}
+::-moz-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9); 
+    border-radius: 10px;
+}
+ 
+::-moz-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.editimg{
+	background:url('../../admin/assets/images/edit.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	border:0;
+	width:25px;
+	height:25px;
+	outline:none;
+}
+.deleteimg{
+	background:url('../../admin/assets/images/delete.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	border:0;
+	width:25px;
+	height:25px;
+	outline:none;
+}
+.modoimg{
+	background:url('../../admin/assets/images/modo.png');
+	background-repeat:no-repeat;
+	background-position:center;
+	border:0;
+	width:25px;
+	height:25px;
+	outline:none;
 }
 
 /*1.1Fonts*/
@@ -739,4 +785,94 @@ body{
 	margin:10px auto 10px auto;
 	text-align:center;
 	font-size:30px;
+}
+
+/*14.Administration|Index*/
+.centermepls{
+	margin:auto;
+	width:430px;
+}
+.pbuttonadmin{
+	text-align:center;
+	line-height:55px;
+	width:45%;
+	color:white;
+	background-color:#96201d;
+	border:1px solid black;
+	border-radius:5px;
+	margin:10px 5px 10px 5px;
+	float:left;
+}
+.pbuttonadmin a{
+	color:white;
+	text-decoration:none;
+}
+
+/*15.Administration|SEO*/
+.bigforming{
+	width:90%;
+	margin:auto;
+	border-collapse:collapse;
+}
+.bigforming table, .bigforming thead, .bigforming tbody, .bigforming tfoot{
+	width:90%;
+	margin:auto;
+	border-collapse:collapse;
+}
+.bigforming table tr, .bigforming table tr td, .bigforming table tr th{
+	border:1px solid black;
+}
+.bigforming thead tr{
+	width:90%;
+}
+.bigforming thead tr th:nth-child(1){
+	width:10%;
+}
+.bigforming thead tr th:nth-child(n+2){
+	width:30%;
+}
+.bigforming table tbody tr td{
+	text-align:center;
+}
+.bigforming table tbody tr td form{
+	text-align:center;
+	width:50%;
+	float:left;
+	margin:auto;
+}
+.imgforming{
+	width:100px;
+}
+.actioning{
+	margin:0;
+	cursor:pointer;
+}
+.buttoninsert{
+	text-align:center;
+	line-height:55px;
+	width:250px;
+	color:white;
+	background-color:#96201d;
+	border:1px solid black;
+	border-radius:5px;
+	margin:10px auto 10px auto;
+	display:block;
+	outline:none;
+	cursor:pointer;
+	font-size:20px;
+}
+	
+/*16.Administration|Avis client*/
+.titlemodo{
+	text-decoration:underline;
+	margin:10px auto 10px auto;
+}
+
+/*17.Administration|calendar*/
+.containercalendar{
+	width: 40%;
+	margin:auto;
+}
+.visualyear, .visualmonth{
+	color:white !important;
 }

@@ -16,22 +16,28 @@
 		<title>Administration - Tout Feu Tout Flam's ©</title>
 		<meta charset="utf-8" />
 		<meta name="description" content=""/>
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../assets/css/styletablette.css"/>
+		<link rel="stylesheet" type="text/css" href="../assets/css/styleweb.css"/>
 	</head>
 	<body>
-		<section class="maincontainer">
+		<section class="hugecontainer">
 		<?php
 			if(isset($_SESSION['connect'])){
-				include_once 'assets/php/menu.php';
+				include_once '/assets/php/header.php';
 				echo 
 					"<div class=\"cb\"></div>".
-					"<h1 style='margin:0;'>Administration Tout Feu Tout Flam's | Bienvenue ".$_SESSION['username']."</h1>".
-					"<p><a href=\"../index.php\">Retour au site</a></p>".
-					"<p><a href=\"sessiondestroy.php\" onclick=\"return confirm('Se déconnecter et revenir à l\'accueil ?');\">[Déconnexion]</a></p>"
+					"<h1 style='margin:0; text-align:center;'>Administration Tout Feu Tout Flam's | Bienvenue ".$_SESSION['username']."</h1>".
+					"<div class='centermepls'><p class='pbuttonadmin'><a href=\"../index.php\">Retour au site</a></p>".
+					"<p class='pbuttonadmin'><a href=\"sessiondestroy.php\" onclick=\"return confirm('Se déconnecter et revenir à l\'accueil ?');\">[Déconnexion]</a></p></div>".
+					"<div class='cb'></div>"
 				;
+				
 			?>
 				
-			
+			<?php
+				include_once '/assets/php/footer.php';
+			?>
 			<?php 
 				
 				
@@ -54,7 +60,8 @@
 					;
 			}
 		?>
-			
+			<script src="assets/js/jquery-2.2.0.min.js"></script>
+			<script src="assets/js/menu.js"></script>
 		</section>
 	</body>
 </html>
