@@ -23,20 +23,20 @@
 			<?php 
 				include_once "assets/php/header.php";
 			?>
-			<article class="containeractu">
+			<article class="containeractuactu">
 				<?php
 					foreach($actu as $a){
 						echo 
 							'<a href="article.php?id='.$a->id.'"><h1>'.$a->title.'</h1></a>'.
 							'<img src="assets/images/article/'.$a->main_image.'"/>'.
-							'<p>'.
+							'<div class="containerbigarticle"><p>'.
 								$a->content.
 							'</p>'.
 							'<a href="article.php?id='.$a->id.'">'.
-								'<div class="buttoncontaineractu">'.
+								'<div class="buttoncontaineractuactu">'.
 									'Lire la suite'.
 								'</div>'.
-							'</a>'
+							'</a></div>'
 						;
 					}
 				?>

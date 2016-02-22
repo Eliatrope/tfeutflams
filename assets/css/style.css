@@ -7,6 +7,7 @@
 2.ERROR 666 UGLY WEBSITE
 3.Header
 4.Actualités
+	4.1Actualités page
 5.Gmaps/Module géolocalisation
 6.Nos produits[home]
 7.Formulaire pré-commande
@@ -283,6 +284,18 @@ body{
 	margin:5px auto 0 auto;
 	border:1px solid white;
 }
+.buttoncontaineractuactu{
+	width:145px;
+	height:35px;
+	font-size:21px;
+	border-radius:10px;
+	background-color:#96201d;
+	color:white;
+	text-align:center;
+	line-height:35px;
+	margin:5px auto 0 auto;
+	border:1px solid white;
+}
 .actualites{
 	width:100%;
 	margin-top: -35px;
@@ -321,7 +334,38 @@ body{
 	border:1px solid white;
 	margin-top: -50px;
 }
-
+/*4.1Actualités page*/
+.containeractuactu{
+	width:100%;
+	/*background-color:#2a2a2a;*/
+	margin:0px auto 10px auto;
+	color:black;
+}
+.containeractuactu a{
+	text-decoration:none;
+	color:black;
+}
+.containeractuactu h1{
+	font-size:32px;
+	text-align:center;
+	padding:20px 0 20px 0;
+	margin:0;
+	height:40px;
+	overflow:hidden;
+}
+.containeractuactu img{
+	width:285px;
+	margin:auto;
+	display:block;
+	opacity:.9;
+}
+.containeractuactu p{
+	width:285px;
+	margin:10px auto 10px auto;
+	text-align:justify;
+	height:152px;
+	overflow:hidden;
+}
 
 /*5.Gmaps/Module géolocalisation*/
 .containerrdv{
@@ -598,6 +642,8 @@ body{
 }
 .containerslidepres img{
 	width:100%;
+	/* position: absolute; */
+	/* top: 10%; */
 }
 .apres{
 	position:absolute;
@@ -632,9 +678,9 @@ body{
 /*11.Article*/
 .containeractuarticle{
 	width:100%;
-	background-color:#2a2a2a;
+	/*background-color:#2a2a2a;*/
 	margin:0px auto 10px auto;
-	color:white;
+	color:black;
 }
 .containeractuarticle h1{
 	text-align:center;

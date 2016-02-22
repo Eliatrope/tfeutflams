@@ -29,7 +29,7 @@
 		color:black;
 		font-weight:bold;
 	}
-	.containeractu, .containerrdv, .containertitleproduits, .navgeoloc, #map, .containerproduits, .containeroverflowproduct, .containerformcommande form div, .containerformcommande, .footer, .containergalerie, .containeractuarticle, .containertitleformules, .containeravis,.containerformule,.containerformulesprecision,.detailproduit{
+	.containeractu, .containerrdv, .containertitleproduits, .navgeoloc, #map, .containerproduits, .containeroverflowproduct, .containerformcommande form div, .containerformcommande, .footer, .containergalerie, .containeractuarticle, .containertitleformules, .containeravis,.containerformule,.containerformulesprecision,.detailproduit, .containeractuactu{
 		width:1200px;
 		margin:auto;
 	}
@@ -70,6 +70,26 @@
 		display:inline-block;
 		font-size:22px;
 		height:365px;
+	}
+	.containeractuactu img{
+		width:45%;
+		display:inline-block;
+		margin-right:1.5%;
+		margin-left:1.5%;
+	}
+	.containeractuactu p{
+		font-size:22px;
+		height:335px;
+		width:100%;
+		margin:0;
+	}
+	.buttoncontaineractuactu{
+		display:inline-block;
+	}
+	.containerbigarticle{
+		width:50%;
+		display:inline-block;
+		padding-bottom:20px;
 	}
 	.containergalerieimg{
 		width:33%;
