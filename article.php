@@ -39,7 +39,7 @@
 						;
 					}
 				?>
-				<a class="retouractu" href="actualites.php">← Retour</a>
+				<a class="retouractu" href="actualites.php">← Retour à la liste des articles</a>
 			</article>
 			<?php
 				include_once "assets/php/footer.php";

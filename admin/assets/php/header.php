@@ -7,14 +7,15 @@
 	<aside class="menupop" id="menupop">
 		<ul>
 			<a href="index.php"><li>Accueil</li></a>
+			<a href="actu.php"><li>Actualités</li></a>
 			<a href="gmaps.php"><li>Gmaps</li></a>
 			<a href="emplacement.php"><li>Emplacements</li></a>
+			<a href="aboutus.php"><li>Il était une flam's</li></a>
 			<a href="avis.php"><li>Avis clients</li></a>
 			<a href="seo.php"><li>SEO</li></a>
 			<a href="galerie.php"><li>Images</li></a>
 			<a href="commande.php"><li>Commandes</li></a>
 			<a href="produits.php"><li>Produits</li></a>
-			<a href="ingredients.php"><li>Ingrédients</li></a>
 			<a href="profil.php"><li>Profil</li></a>
 		</ul>
 		<div class="menuclose" id="menuclose">X</div>
@@ -23,14 +24,15 @@
 <aside class="menuweb">
 	<ul>
 		<a href="index.php"><li>Accueil</li></a>
+		<a href="actu.php"><li>Actualités</li></a>
 		<a href="gmaps.php"><li>Gmaps</li></a>
 		<a href="emplacement.php"><li>Emplacements</li></a>
+		<a href="aboutus.php"><li>Il était une flam's</li></a>
 		<a href="avis.php"><li>Avis clients</li></a>
 		<a href="seo.php"><li>SEO</li></a>
 		<a href="galerie.php"><li>Images</li></a>
 		<a href="commande.php"><li>Commandes</li></a>
 		<a href="produits.php"><li>Produits</li></a>
-		<a href="ingredients.php"><li>Ingrédients</li></a>
 		<a href="profil.php"><li>Profil</li></a>
 	</ul>
 </aside>

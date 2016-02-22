@@ -68,6 +68,8 @@
 	$resultat=$connexion->query($sql);
 	$seo=$resultat->fetchAll(PDO::FETCH_OBJ);
 	
+	
+	
 ?>
 <!--Astuce du jour: https://developers.google.com/web/tools/setup/setup-workflow. Pour ne plus avoir à reload le navigateur quant on fait des modifs dans les fichiers-->
 <!DOCTYPE html>

@@ -23,7 +23,7 @@
 	<body>
 		<section class="hugecontainer">
 		<?php
-			if(isset($_SESSION['connect'])){
+			if(isset($_SESSION['connect']) && !is_null($_SESSION['connect'])){
 				include_once '/assets/php/header.php';
 				echo 
 					"<div class=\"cb\"></div>".
@@ -44,6 +44,8 @@
 				//echo $_SESSION['connect'];
 			}else{
 				//$_SESSION['connect']=0;
+				//unset($_SESSION['connect']);
+				//session_destroy();
 				echo
 					
 						"<h1><span>V</span>euillez vous identifier</h1>
@@ -56,8 +58,10 @@
 						</form>
 						<p><a href='../index.php'>Retour au site</a></p>"
 						
+				
 						
 					;
+						
 			}
 		?>
 			<script src="assets/js/jquery-2.2.0.min.js"></script>

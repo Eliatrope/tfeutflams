@@ -4,5 +4,5 @@
 		
 		<a href="http://www.instagram.com" target="_blank"><img alt="Retrouvez Tout Feu Tout Flam's sur Instagram" title="Retrouvez Tout Feu Tout Flam's sur Instagram" src="assets/images/home/insta.png"/></a>
 	</div>
-	<p><a href="">SUIVEZ NOUS</a> - <a href="">MENTIONS LÉGALES</a> - <a href="">PLAN DU SITE</a></p>
+	<p><a href="followus.php">SUIVEZ NOUS</a> - <a href="mentions.php">MENTIONS LÉGALES</a> - <a href="">PLAN DU SITE</a></p>
 </footer>

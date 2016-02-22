@@ -10,12 +10,20 @@
 		<link href="assets/css/style.css" type="text/css" rel="stylesheet" />
 		<link href="assets/css/styletablette.css" type="text/css" rel="stylesheet" />
 		<link href="assets/css/styleweb.css" type="text/css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="admin/assets/css/bic_calendar.css"/>
+		<link rel="stylesheet" type="text/css" href="admin/assets/css/bootstrap-theme.min.css"/>
+		<link rel="stylesheet" type="text/css" href="admin/assets/css/bootstrap.min.css"/>
 	</head>
 	
 	
 	<body>
 		<section class="hugecontainer">
 			<?php include_once "assets/php/header.php";?>
+			<div class="containercalendar">
+				<div id="events-calendar"></div>
+			</div>
+			
+			<!--List of events in a table-->
 			<div class="containerformcommande">
 					<h5>ENVIE D'UNE<br>SOIRÉE FLAM'S?</h5>
 					<form action="" method="POST">
@@ -50,6 +58,63 @@
 		</section>
 		<script src="assets/js/jquery-2.2.0.min.js"></script>
 		<script src="assets/js/menu.js"></script>
+			<script src="admin/assets/js/bootstrap.min.js"></script>
+			<script src="http://momentjs.com/downloads/moment.js"></script>
+			<script src="admin/assets/js/bic_calendar.min.js"></script>
+			<script>
+				
+					$(document).ready(function() {
+
+						var monthNames = ["Janvier", "Fevrier", "Mars", "Avril", "Mai", "Juin", "Juillet", "Aout", "Septembre", "Octobre", "Novembre", "Decembre"];
+
+						var dayNames = ["Lu", "Ma", "Me", "Je", "Ve", "Sa", "Di"];
+					<?php 
+					//Initialisation
+					$sql="SELECT * FROM commande WHERE moderation=1";
+					$resultat=$connexion->query($sql);
+					$commande=$resultat->fetchAll(PDO::FETCH_OBJ);
+						echo "var events = [";
+							foreach($commande as $c){
+								echo
+									"{
+										date: \"".$c->date."\",
+										title: \"".$c->title."\",
+										link: \"".$c->link."\",
+										linkTarget: \"_blank\",
+										color: \"\",
+										content: \"".$c->content."\",
+										class: \"\",
+										displayMonthController: true,
+										displayYearController: true,
+										nMonths: 6
+									},"
+									;
+							}
+						echo"];";
+							
+						echo "$('#events-calendar').bic_calendar({
+								//list of events in array
+								events: events,
+								//enable select
+								enableSelect: false,
+								//enable multi-select
+								multiSelect: false,
+								//set day names
+								dayNames: dayNames,
+								//set month names
+								monthNames: monthNames,
+								//show dayNames
+								showDays: true,
+								//show month controller
+								displayMonthController: true,
+								//show year controller
+								displayYearController: true,
+							});"
+							;
+					?>
+						});
+				
+			</script>
 	</body>
 </html>
 			

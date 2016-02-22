@@ -2,7 +2,7 @@
 	session_start();
 	//$session=$_SESSION['connect'];
 
-	if($_SESSION['connect']==1){
+	if(isset($_SESSION['connect'])){
 		echo '<meta charset="utf-8"/>';
 		echo 'Déconnexion effectuée. Vous allez être redirigé...';
 		echo '<meta http-equiv="refresh" content="
@@ -13,7 +13,7 @@
 	}else{
 		echo '<meta http-equiv="refresh" content="0; URL=../index.php">';
 		
-		echo $_SESSION['connect'];
+		//echo $_SESSION['connect'];
 	}
 ?>
 

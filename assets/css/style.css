@@ -500,7 +500,7 @@ body{
 }
 .containerformcommande form input:last-child{
 	width:40%;
-	margin:10px auto 0 auto;
+	margin:0 auto 0 auto;
 	display:block;
 	height:40px;
 	border-radius:5px;
@@ -825,11 +825,8 @@ body{
 .bigforming thead tr{
 	width:90%;
 }
-.bigforming thead tr th:nth-child(1){
-	width:10%;
-}
-.bigforming thead tr th:nth-child(n+2){
-	width:30%;
+.bigforming tbody tr td img{
+	width:90%;
 }
 .bigforming table tbody tr td{
 	text-align:center;

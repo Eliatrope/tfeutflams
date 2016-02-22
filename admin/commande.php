@@ -141,6 +141,9 @@
 											Titre
 										</th>
 										<th>
+											Description
+										</th>
+										<th>
 											Lien
 										</th>
 										<th>
@@ -185,6 +188,9 @@
 									$c->title.
 								'</td>'.
 								'<td>'.
+									$c->content.
+								'</td>'.
+								'<td>'.
 									$c->link.
 								'</td>'.
 								'<td>'.
@@ -220,22 +226,9 @@
 				
 				//echo $_SESSION['connect'];
 			}else{
-				//$_SESSION['connect']=0;
-				echo
-					
-						"<h1><span>V</span>euillez vous identifier</h1>
-						<form action='login.php' method='POST'>
-							<label for='username'>Username</label>
-								<input type='text' id='username' placeholder='Votre username' name='username' />
-							<label for='password'>Password</label>
-								<input type='password' id='password' placeholder='Votre password' name='password' />
-								<div><input type='submit' name='submit' value='Identifier' /></div>
-						</form>
-						<p><a href='../index.php'>Retour au site</a></p>"
-						
-						
-					;
-			}
+					echo 'Accès interdit ou refusé! Vous allez être redirigé...';
+					echo '<meta http-equiv="refresh" content="4; URL=index.php">';
+				}
 		?>
 			<script src="assets/js/jquery-2.2.0.min.js"></script>
 			<script src="assets/js/menu.js"></script>
@@ -263,7 +256,7 @@
 										link: \"".$c->link."\",
 										linkTarget: \"_blank\",
 										color: \"\",
-										content: \"Réservation soirée flam's\",
+										content: \"".$c->content."\",
 										class: \"\",
 										displayMonthController: true,
 										displayYearController: true,

@@ -15,6 +15,7 @@
 		<link href="assets/css/style.css" type="text/css" rel="stylesheet" />
 		<link href="assets/css/styletablette.css" type="text/css" rel="stylesheet" />
 		<link href="assets/css/styleweb.css" type="text/css" rel="stylesheet" />
+		<link href="assets/css/magnific-popup.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<section class="hugecontainer">
@@ -23,14 +24,14 @@
 				<?php
 					foreach($galerie as $g){
 						echo 
-							'<div class="containergalerieimg">'.
+							'<div class="containergalerieimg popup" title="'.$g->description.'" href="assets/images/galerie/'.$g->img.'">'.
 								'<img alt="'.$g->alt.'" title="'.$g->title.'" src="assets/images/galerie/'.$g->img.'"/>'.
 							'</div>'
 						;
 					}
 				?>
 			</div>
-			<div class="viewmoregalerie">
+			<!--<div class="viewmoregalerie">-->
 				
 			</div>
 			<?php include_once "assets/php/footer.php";?>
@@ -38,5 +39,7 @@
 		
 		<script src="assets/js/jquery-2.2.0.min.js"></script>
 		<script src="assets/js/menu.js"></script>
+		<script src="assets/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+		<script src="assets/js/lightbox.js" type="text/javascript"></script>
 	</body>
 </html>

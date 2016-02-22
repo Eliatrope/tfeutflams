@@ -24,6 +24,8 @@
 		if($check==FALSE){
 			echo 'Mauvais nom d\'utilisateur ou mot de passe, vous allez être redirigé...';
             echo '<meta http-equiv="refresh" content="4; URL=index.php">';
+			unset($_SESSION['connect']);
+			session_destroy();	
 		}else{
 			$_SESSION['connect']=1;
 			$_SESSION['username']=$username;

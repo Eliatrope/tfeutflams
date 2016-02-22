@@ -32,7 +32,7 @@
 				
 			?>
 				<form action="insert.php" method="POST">
-					<button name="table" value="flams" class="buttoninsert">Insérer un nouvel élément</button>
+					<button name="table" value="socialnetwork" class="buttoninsert">Insérer un nouvel élément</button>
 				</form>
 				<div class="bigforming">
 							<table>
@@ -40,19 +40,10 @@
 									<tr>
 										
 										<th>
-											Image
+											Facebook
 										</th>
 										<th>
-											Nom
-										</th>
-										<th>
-											Description
-										</th>
-										<th>
-											Ingrédients
-										</th>
-										<th>
-											Prix
+											Instagram
 										</th>
 										<th>
 											Actions
@@ -64,32 +55,22 @@
 			<?php
 					
 					//Initialisation
-					$sql='SELECT * FROM flams';
+					$sql='SELECT * FROM socialnetwork';
 					$resultat=$connexion->query($sql);
-					$flams = $resultat->fetchAll(PDO::FETCH_OBJ);
+					$sone = $resultat->fetchAll(PDO::FETCH_OBJ);
 					
-					foreach($flams as $f){
+					foreach($sone as $sn){
 						echo 
 							'<tr>'.
 								'<td>'.
-									'<img src="../assets/images/flams/'.$f->img.'" />'.
+									$sn->facebook.
 								'</td>'.
 								'<td>'.
-									$f->nom.
+									$sn->instagram.
 								'</td>'.
 								'<td>'.
-									$f->description.
-								'</td>'.
-								'<td>'.
-									$f->ingredients.
-								'</td>'.
-								'<td>'.
-									$f->prix.
-								'€</td>'.
-								'<td>'.
-									'<form action="edit.php" method="POST"><input class="actioning editimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="flams" /><input type="hidden" name="id" value="'.$f->id.'" /></form>'.
-									'<form action="delete.php" method="POST"><input class="actioning deleteimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="flams" /><input type="hidden" name="id" value="'.$f->id.'" />
-									</form>'.
+									'<form action="edit.php" method="POST"><input class="actioning editimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="socialnetwork" /><input type="hidden" name="id" value="'.$sn->id.'" /></form>'.
+									'</form>'.
 								'</td>'.
 							'</tr>'
 						;

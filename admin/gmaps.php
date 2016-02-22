@@ -37,7 +37,7 @@
 				
 			?>
 				<p style="text-align:center;">	Aujourd'hui, nous sommes le <u><?php echo $todayfr;?></u><br>
-				Ce qui signifie que le module gmaps(carte) exposera les emplacements enregistrés dans l'intervalle du <u><?php echo $todayfr.' au '.$Jplus7fr;?></u>
+				Ce qui signifie que le module gmaps(carte) exposera les emplacements enregistrés dans l'intervalle: <u><?php echo $todayfr.' au '.$Jplus7fr;?></u>
 				</p>
 				<form action="insert.php" method="POST">
 					<button name="table" value="gmaps" class="buttoninsert">Insérer un nouvel élément</button>
@@ -124,22 +124,9 @@
 				
 				//echo $_SESSION['connect'];
 			}else{
-				//$_SESSION['connect']=0;
-				echo
-					
-						"<h1><span>V</span>euillez vous identifier</h1>
-						<form action='login.php' method='POST'>
-							<label for='username'>Username</label>
-								<input type='text' id='username' placeholder='Votre username' name='username' />
-							<label for='password'>Password</label>
-								<input type='password' id='password' placeholder='Votre password' name='password' />
-								<div><input type='submit' name='submit' value='Identifier' /></div>
-						</form>
-						<p><a href='../index.php'>Retour au site</a></p>"
-						
-						
-					;
-			}
+					echo 'Accès interdit ou refusé! Vous allez être redirigé...';
+					echo '<meta http-equiv="refresh" content="4; URL=index.php">';
+				}
 		?>
 			<script src="assets/js/jquery-2.2.0.min.js"></script>
 			<script src="assets/js/menu.js"></script>

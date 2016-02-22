@@ -32,27 +32,20 @@
 				
 			?>
 				<form action="insert.php" method="POST">
-					<button name="table" value="flams" class="buttoninsert">Insérer un nouvel élément</button>
+					<button name="table" value="actualite" class="buttoninsert">Insérer un nouvel élément</button>
 				</form>
 				<div class="bigforming">
 							<table>
 								<thead>
 									<tr>
-										
 										<th>
-											Image
+											Image principale
 										</th>
 										<th>
-											Nom
+											Titre
 										</th>
 										<th>
-											Description
-										</th>
-										<th>
-											Ingrédients
-										</th>
-										<th>
-											Prix
+											Contenu
 										</th>
 										<th>
 											Actions
@@ -64,31 +57,25 @@
 			<?php
 					
 					//Initialisation
-					$sql='SELECT * FROM flams';
+					$sql='SELECT * FROM actualite';
 					$resultat=$connexion->query($sql);
-					$flams = $resultat->fetchAll(PDO::FETCH_OBJ);
+					$actu = $resultat->fetchAll(PDO::FETCH_OBJ);
 					
-					foreach($flams as $f){
+					foreach($actu as $a){
 						echo 
 							'<tr>'.
 								'<td>'.
-									'<img src="../assets/images/flams/'.$f->img.'" />'.
+									'<img src="../assets/images/article/'.$a->main_image.'" />'.
 								'</td>'.
 								'<td>'.
-									$f->nom.
+									$a->title.
 								'</td>'.
 								'<td>'.
-									$f->description.
+									$a->content.
 								'</td>'.
 								'<td>'.
-									$f->ingredients.
-								'</td>'.
-								'<td>'.
-									$f->prix.
-								'€</td>'.
-								'<td>'.
-									'<form action="edit.php" method="POST"><input class="actioning editimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="flams" /><input type="hidden" name="id" value="'.$f->id.'" /></form>'.
-									'<form action="delete.php" method="POST"><input class="actioning deleteimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="flams" /><input type="hidden" name="id" value="'.$f->id.'" />
+									'<form action="edit.php" method="POST"><input class="actioning editimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="actualite" /><input type="hidden" name="id" value="'.$a->id.'" /></form>'.
+									'<form action="delete.php" method="POST"><input class="actioning deleteimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="actualite" /><input type="hidden" name="id" value="'.$a->id.'" />
 									</form>'.
 								'</td>'.
 							'</tr>'

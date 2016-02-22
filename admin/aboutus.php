@@ -32,27 +32,32 @@
 				
 			?>
 				<form action="insert.php" method="POST">
-					<button name="table" value="flams" class="buttoninsert">Insérer un nouvel élément</button>
+					<button name="table" value="presentation" class="buttoninsert">Insérer un nouvel élément</button>
 				</form>
 				<div class="bigforming">
 							<table>
 								<thead>
 									<tr>
-										
 										<th>
-											Image
+											Image 1
 										</th>
 										<th>
-											Nom
+											Image 2
 										</th>
 										<th>
-											Description
+											Image 3
 										</th>
 										<th>
-											Ingrédients
+											Titre 1
 										</th>
 										<th>
-											Prix
+											Titre 2
+										</th>
+										<th>
+											Contenu 1
+										</th>
+										<th>
+											Contenu 2
 										</th>
 										<th>
 											Actions
@@ -64,31 +69,37 @@
 			<?php
 					
 					//Initialisation
-					$sql='SELECT * FROM flams';
+					$sql='SELECT * FROM presentation';
 					$resultat=$connexion->query($sql);
-					$flams = $resultat->fetchAll(PDO::FETCH_OBJ);
+					$presentation = $resultat->fetchAll(PDO::FETCH_OBJ);
 					
-					foreach($flams as $f){
+					foreach($presentation as $p){
 						echo 
 							'<tr>'.
 								'<td>'.
-									'<img src="../assets/images/flams/'.$f->img.'" />'.
+									'<img src="../assets/images/presentation/'.$p->img1.'" />'.
 								'</td>'.
 								'<td>'.
-									$f->nom.
+									'<img src="../assets/images/presentation/'.$p->img2.'" />'.
 								'</td>'.
 								'<td>'.
-									$f->description.
+									'<img src="../assets/images/presentation/'.$p->img3.'" />'.
 								'</td>'.
 								'<td>'.
-									$f->ingredients.
+									$p->title_welcome.
 								'</td>'.
 								'<td>'.
-									$f->prix.
-								'€</td>'.
+									$p->title_pres.
+								'</td>'.
 								'<td>'.
-									'<form action="edit.php" method="POST"><input class="actioning editimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="flams" /><input type="hidden" name="id" value="'.$f->id.'" /></form>'.
-									'<form action="delete.php" method="POST"><input class="actioning deleteimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="flams" /><input type="hidden" name="id" value="'.$f->id.'" />
+									$p->txt_welcome.
+								'</td>'.
+								'<td>'.
+									$p->txt_pres.
+								'</td>'.
+								'<td>'.
+									'<form action="edit.php" method="POST"><input class="actioning editimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="presentation" /><input type="hidden" name="id" value="'.$p->id.'" /></form>'.
+									'<form action="delete.php" method="POST"><input class="actioning deleteimg" type="submit" name="submit" value=""/><input type="hidden" name="table" value="presentation" /><input type="hidden" name="id" value="'.$p->id.'" />
 									</form>'.
 								'</td>'.
 							'</tr>'
